@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='css/styles.css' />
+
+    <script src='js/vendor/jquery.js'></script>
+    <script src='js/vendor/underscore.js'></script>
+    <script src='js/vendor/backbone.js'></script>
+    <script src='js/vendor/backbone.stickit.js'></script>
+
+    <script src='js/game.model.js'></script>
+    <script src='js/game.view.js'></script>
+
+
+    <script type='text/template' id='template__game-view'>
+
+        <div class='js-container hangman__container'>
+            <div class='js-display hangman__display'></div>
+            <div class='js-guess-container hangman__guess-container'>
+                <p>
+                    Next guess: <input type='text' class='js-guess hangman__guess' maxlength='1' />
+                </p>
+                <p>
+                    <button class='js-new-word hangman__new-word'>New Word</button>
+                    <button class='js-reveal hangman__reveal'>Reveal</button>
+                </p>
+            </div>
+            <div class='js-guess-history hangman__guess-history'></div>
+        </div>
+
+    </script>
+
+
+    <script type='text/template' id='template__characters'>
+        <% _( characters ).each( function ( character )
+        {
+        %>
+            <div class="hangman__character  <%= character.classList %>">
+                <%= character.char %>
+            </div>
+            <%
+        } );
+        %>
+    </script>
+
+
+
+    <script type='text/javascript'>
+        $(document).ready(function() {
+
+            var model = new GameModel();
+            var view = new GameView({
+                el: '#main',
+                model: model
+            });
+
+            view.render();
+            model.fetch();
+
+        });
+    </script>
+</head>
+</head>
+
+<body>
+
+    <div id='main'></div>
+
+</body>
+
+</html>

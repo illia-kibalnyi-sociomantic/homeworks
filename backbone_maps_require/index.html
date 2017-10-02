@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Backbone+Require Maps</title>
+
+    <link type="text/css" rel="stylesheet" href="css/normalize.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+</head>
+
+<body>
+    <div id="contents" class="contents"></div>
+    <script type="text/template" id="app-template">
+        <h2>Maps</h2>
+
+        <div id="app"></div>
+    </script>
+    <script type="text/template" id="form-template">
+        <form id="form" class="module form">
+            <div class="title">
+                Enter GPS Coordinates
+            </div>
+            <div class="row">
+                <label for="latitude" class="required">
+                    Latitude
+                </label>
+                <input type="text" id="latitude" name="lat" required number class="required number" />
+            </div>
+            <div class="row">
+                <label for="longitude" class="required">
+                    Longitude
+                </label>
+                <input type="text" id="longitude" name="lng" required number class="required number" />
+            </div>
+            <div class="row">
+                <button id="show-map">
+                      Show Map
+                  </button>
+            </div>
+        </form>
+    </script>
+    <script type="text/template" id="map-template">
+        <div id="map" class="module map">
+            <div class="title">Map</div>
+            <div id="map-canvas"></div>
+        </div>
+    </script>
+    <script type="text/template" id="streetview-template">
+        <div id="streetmap" class="module image">
+            <div class="title">Street View</div>
+            <div id="street-view-canvas" class="street-image main"></div>
+        </div>
+    </script>
+
+    <script data-main="js/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+</body>
+
+</html>

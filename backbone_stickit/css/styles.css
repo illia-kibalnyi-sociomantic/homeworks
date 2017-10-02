@@ -1,0 +1,63 @@
+.hangman__container
+{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 300px;
+    max-width: 1000px;
+}
+
+.hangman__display
+{
+    text-align: center;
+}
+
+.hangman__guess-container, .hangman__guess,
+.hangman__new-word, .hangman__reveal
+{
+    text-align: center;
+    font-family: arial;
+    font-size: 12pt;
+}
+
+
+.hangman__character
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 5px;
+    font-family: arial;
+    font-size: 20pt;
+    border: 1px solid lightgray;
+    color: lightgray;
+}
+
+
+.hangman__character.correct
+{
+    border: 1px solid darkgreen;
+    color: green;
+    font-weight: bold;
+    background-color: #eeffee;
+}
+
+
+.hangman__character.incorrect
+{
+    border: 1px solid darkred;
+    color: red;
+    font-weight: bold;
+    background-color: #ffeeee;
+}
+
+
+.hangman__character.revealed
+{
+    border: 1px solid darkblue;
+    color: blue;
+    font-weight: bold;
+    background-color: #eeeeff;
+}

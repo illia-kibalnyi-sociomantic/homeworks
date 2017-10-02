@@ -1,0 +1,128 @@
+/*/////////////////*/
+/*/ Constants     /*/
+/*/////////////////*/
+/*/////////////////*/
+/*/ Basic         /*/
+/*/////////////////*/
+div {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+}
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+.contents {
+  position: relative;
+  width: 900px;
+  margin: 20px auto 20px auto;
+  padding: 20px;
+}
+.module {
+  margin: 10px 0 10px 0;
+  padding: 0 0 10px 0;
+  width: 860px;
+  height: auto;
+  border: 1px #000000 solid;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  clear: both;
+}
+.module .title {
+  line-height: 22px;
+  font-size: 14px;
+  padding: 8px 0 8px 12px;
+  background-color: #dddddd;
+  margin: 0 0 10px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-top-left-radius: 10px;
+  -webkit-top-right-radius: 10px;
+  -moz-border-radius: 10px;
+}
+.hidden {
+  display: none !important;
+}
+/*///////////////////*/
+/*/  Form           /*/
+/*///////////////////*/
+.form .row {
+  margin: 0 0 6px 0;
+}
+.form input {
+  display: inline-block;
+  width: 180px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.form input.long {
+  display: inline-block;
+  width: 300px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.form input.error {
+  border-color: #c11;
+}
+.form label {
+  display: inline-block;
+  width: 160px;
+  text-align: right;
+  padding: 0 15px 0 0;
+  margin: 0;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.form label.error {
+  color: #c11;
+  border: 1px #c11 solid;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  margin-left: 25px;
+  width: auto;
+  padding: 2px 10px 2px 10px;
+}
+.form label.required::after {
+  content: "*";
+}
+.form button {
+  margin-left: 180px;
+  display: inline-block;
+  line-height: 18px;
+  vertical-align: middle;
+  background-color: #ccc;
+  border: 1px #666 solid;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 12px;
+}
+.form button:hover {
+  background-color: #eee;
+}
+.form button.find-coordinates {
+  margin-left: 10px;
+}
+/*///////////////////*/
+/*/  Map            /*/
+/*///////////////////*/
+#map-canvas {
+  width: 840px;
+  height: 220px;
+  margin: 10px auto;
+}
+/*///////////////////*/
+/*/  Image          /*/
+/*///////////////////*/
+.street-image {
+  width: 800px;
+  height: 400px;
+  margin: 20px auto 20px auto;
+}
